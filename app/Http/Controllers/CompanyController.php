@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Company;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class CompanyController extends Controller
@@ -15,7 +16,7 @@ class CompanyController extends Controller
     public function index()
     {
         //
-        $companies=Company::all();
+        $companies=Company::paginate(1);
         return view('admin.company.list',['companies'=>$companies]);
     }
 

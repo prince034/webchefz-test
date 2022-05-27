@@ -34,4 +34,5 @@
             </div>
         </div>
     </div>
+    {{ $companies->links() }}
 @endsection
